@@ -1,26 +1,8 @@
 .temperature-converter {
-  margin: 0 auto;
   text-align: center;
-  position: relative;
-  background-image: url("/assets/thermometer.jpg");
-  background-size: cover;
-  background-position: center;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.temperature-converter::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: inherit;
-  filter: blur(8px);
-  z-index: -1;
-  border-radius: 10px;
 }
 
 .temperature-converter div {
