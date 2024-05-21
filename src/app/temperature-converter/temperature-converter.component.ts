@@ -70,13 +70,33 @@ function convertTemperature(): void {
   }
 }
 
+// Function to clear the inputs and reset the background color
+function clearInputs(): void {
+  const celsiusInput = document.getElementById('celsius') as HTMLInputElement;
+  const fahrenheitInput = document.getElementById(
+    'fahrenheit'
+  ) as HTMLInputElement;
+  const converter = document.querySelector(
+    '.temperature-converter'
+  ) as HTMLElement;
+
+  celsiusInput.value = '';
+  fahrenheitInput.value = '';
+  converter.style.background =
+    'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)';
+}
+
 // Adding event listeners
 document.addEventListener('DOMContentLoaded', () => {
   const celsiusInput = document.getElementById('celsius') as HTMLInputElement;
   const convertButton = document.getElementById(
     'convert-button'
   ) as HTMLButtonElement;
+  const clearButton = document.getElementById(
+    'clear-button'
+  ) as HTMLButtonElement;
 
   celsiusInput.addEventListener('input', updateBackgroundColor);
   convertButton.addEventListener('click', convertTemperature);
+  clearButton.addEventListener('click', clearInputs);
 });

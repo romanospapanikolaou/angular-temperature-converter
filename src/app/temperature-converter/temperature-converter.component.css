@@ -17,7 +17,7 @@
   display: inline-block;
   width: 120px;
   font-size: 16px;
-  color: #333;
+  color: #000000;
 }
 
 .temperature-converter input {
@@ -44,6 +44,7 @@ button {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s, transform 0.3s;
+  margin: 5px;
 }
 
 button:hover {
